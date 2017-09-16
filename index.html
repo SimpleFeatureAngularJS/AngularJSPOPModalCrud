@@ -15,10 +15,10 @@
         <!-- Trigger the modal with a button -->
         <button class="btn btn-sm" data-ng-click="vm.popUpOpen()">Open Modal</button>
         <br>
-        <div  data-ng-if="vm.model" class="row">{{vm.model}}</div>
+        <div  data-ng-if="vm.model.file" class="row">{{vm.model.file}}</div>
         <!-- Modal -->
     <!-- Modal short cut create pipeline-->
-<div id="pipeModal" class="modal fade"
+<div id="pipeModal" class="modal"
         data-keyboard="false"
         data-backdrop="static">
 <div class="modal-dialog">
@@ -33,6 +33,12 @@
                         <label class="control-label col-sm-2" for="email">Email:</label>
                         <div class="col-sm-10">
                           <input type="text" ng-model="vm.model.text1" class="form-control" id="email" placeholder="Enter Text " required/>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">File:</label>
+                        <div class="col-sm-10">
+                          <input type= "file" file-model= "vm.model.file" name="file" class="form-control"/>
                         </div>
                       </div>
                       <div class="form-group">
